@@ -112,7 +112,7 @@ Transcript:
     return eval(cleaned)  # Ensure response is valid JSON (use json.loads for stricter parsing)
 
 
-@app.get("/")
+@app.api_route("/", methods=["GET", "HEAD"])
 def read_root():
     return {"message": "Hello from FastAPI!"}
 
