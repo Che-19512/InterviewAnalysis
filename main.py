@@ -110,6 +110,11 @@ Transcript:
     cleaned = re.sub(r"```json|```", "", response.text).strip()
     return eval(cleaned)  # Ensure response is valid JSON (use json.loads for stricter parsing)
 
+
+@app.get("/")
+def read_root():
+    return {"message": "Hello from FastAPI!"}
+
 # API route
 @app.post("/analyze-transcript")
 async def analyze_transcript(file: UploadFile = File(...)):
