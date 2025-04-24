@@ -5,6 +5,7 @@ import fitz  # PyMuPDF
 import os
 import google.generativeai as genai
 import re
+import uvicorn
 # from dotenv import load_dotenv
 
 # Load .env if available
@@ -121,3 +122,6 @@ async def analyze_transcript(file: UploadFile = File(...)):
     transcript = extract_text(file)
     analysis = get_analysis_from_gemini(transcript)
     return {"analysis": analysis}
+
+if __name__ == "__main__":
+    uvicorn.run(app, host="0.0.0.0", port=8000)
