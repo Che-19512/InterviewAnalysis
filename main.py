@@ -99,8 +99,6 @@ Return exactly this JSON structure, with each value a single paragraph:
   "technical_weaknesses": "<…>",
   "behavioral_strengths": "<…>",
   "behavioral_weaknesses": "<…>",
-  "technical_ability": "<…>",
-  "behavioral_ability": "<…>"
 }}
 
 Transcript:
